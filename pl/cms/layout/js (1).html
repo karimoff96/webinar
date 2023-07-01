@@ -1,0 +1,26 @@
+$(function() { let is_lesson = checkTruePage({ notMode: 1, strict: 0, pages:
+['/teach/control/lesson']}); let is_training = checkTruePage({ notMode: 1,
+strict: 0, pages: ['/teach/control']}); let is_editable = checkTruePage({
+notMode: 1, strict: 0, pages: ['/editable', '/editMode'] }); if(!is_lesson) {
+$('head').append('<link
+  rel="stylesheet"
+  href="/pl/cms/layout/css?id=25293&hash=beac00d38af9025a88ae7a2967d61d2c&bundle=1"
+  type="text/css"
+/>'); } if(!is_training) { if (is_editable) { // Списки тренингов
+$('head').append('<link rel="stylesheet" href="" type="text/css" />'); // Список
+уроков $('head').append('<link
+  rel="stylesheet"
+  href="/pl/cms/layout/css?id=25232&hash=b04e25a840f6352686edc5fe8f6eaba3&bundle=1"
+  type="text/css"
+/>'); } // Элементы тренингов $('head').append('<link
+  rel="stylesheet"
+  href="/pl/cms/layout/css?id=25253&hash=91c2fe21f2d25af5ccd79a1261b20742&bundle=1"
+  type="text/css"
+/>'); } function checkTruePage(opt) { let i=false; opt.pages.forEach(el => { if
+(opt.strict) {console.log(window.location.href,
+el);if(window.location.href==el)i=true;} else
+if(window.location.href.indexOf(el)>-1)i=true; }); return opt.notMode ? !i : i ;
+}
+$('a[href*="'+window.location.pathname+'"][href$="/editMode/1"]').each((i,el)=>{
+$(el).attr('href', $(el).attr('href').replace('/editMode/1','?editMode=1')); });
+})

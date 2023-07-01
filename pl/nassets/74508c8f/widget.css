@@ -1,0 +1,119 @@
+.field-widget .numeric-input {
+  margin-left: 5px;
+  text-align: center;
+}
+
+.field-widget .values-selector {
+  width: 100%;
+}
+
+.field-widget .additional-controls {
+  margin-bottom: 5px;
+  display: block;
+}
+.field-widget .additional-controls label {
+  font-weight: normal;
+}
+
+.date-type-selected .manual-selected-date {
+  display: none;
+}
+
+.n-days-selected-wrap {
+  display: none;
+}
+.date-type-selected.n-days-selected .n-days-selected-wrap {
+  display: block;
+}
+
+.manual-selected-date input.from,
+.manual-selected-date input.to {
+  width: 116px;
+}
+
+.field-dateshift .dateshift-part {
+  display: none;
+}
+.field-dateshift.edit-mode .dateshift-part {
+  display: inline;
+}
+.field-dateshift.edit-mode .view-elem {
+  display: none;
+}
+.field-dateshift .view-elem {
+  cursor: pointer;
+  color: #333;
+  border-bottom: 1px dotted #333;
+}
+
+.field-dateshift .dateshift-part input {
+  margin-right: 3px;
+  text-align: right;
+}
+.field-dateshift .dateshift-part span {
+  margin-right: 10px;
+}
+
+.select-object-widget {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: white;
+  display: inline-block;
+}
+.select-object-short {
+  padding: 7px;
+  color: black;
+}
+.select-object-preselect {
+  overflow: hidden;
+}
+
+.from_n input,
+.to_n input,
+label.date-helper {
+  font-weight: normal;
+}
+
+label.date-helper {
+  font-size: 85%;
+}
+
+.field-widget .with-time-checkbox {
+  float: left;
+  margin-left: 5px;
+  margin-right: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  opacity: 0.3;
+}
+.field-widget .with-time-checkbox.checked {
+  opacity: 1;
+}
+
+/*.date-field-widget {min-width: 250px;}*/
+
+.date-field-widget.one-line .manual-type-selected {
+  overflow: hidden;
+  min-width: 460px;
+}
+.date-field-widget.one-line .manual-type-selected .control-wrapper {
+  float: left;
+  margin-right: 5px;
+}
+.date-field-widget.one-line .additional-controls {
+  margin-bottom: 0;
+}
+
+.date-field-widget.one-line .n-days-selected-wrap {
+  margin-top: 5px;
+}
+.date-field-widget.one-line .n-days-selected-wrap {
+  margin-top: 5px;
+}
+.date-field-widget.one-line .date-helper {
+  display: none;
+}
+
+.date-field-widget .form-control {
+  padding-left: 10px;
+}

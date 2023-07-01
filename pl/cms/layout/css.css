@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Stolzl";
+  src: url("Stolzl-Medium.eot");
+  src: local("Stolzl Medium"), local("Stolzl-Medium"),
+    url("/fileservice/file/download/a/620404/sc/186/h/0c2262a39f9c8c2d21e6e5642e5b2a3e.woff2")
+      format("woff2"),
+    url("/fileservice/file/download/a/620404/sc/58/h/7f3e47f0ad50b56909a8275e0a953553.woff")
+      format("woff"),
+    url("/fileservice/file/download/a/620404/sc/202/h/71a941b769b5e75acdc7057d88f211cd.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stolzl";
+  src: url("Stolzl-Regular.eot");
+  src: local("Stolzl Regular"), local("Stolzl-Regular"),
+    url("/fileservice/file/download/a/620404/sc/89/h/a457412bf316cfa933fc839910d1c700.woff2")
+      format("woff2"),
+    url("/fileservice/file/download/a/620404/sc/249/h/34e1bdc301e088aacac5e83794f9c769.woff")
+      format("woff"),
+    url("/fileservice/file/download/a/620404/sc/116/h/963e39d6b1a95e02b7f0f2e72868d906.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stolzl Book";
+  src: url("Stolzl-Book.eot");
+  src: local("Stolzl Book"), local("Stolzl-Book"),
+    url("/fileservice/file/download/a/620404/sc/459/h/44403a545b4a69951d17ac7e44715610.woff2")
+      format("woff2"),
+    url("/fileservice/file/download/a/620404/sc/232/h/0fd0d042e2ad496008b7aa6acf8737d5.woff")
+      format("woff"),
+    url("/fileservice/file/download/a/620404/sc/355/h/aa4ad9f28264d0026d4b5ca4ab5ba0cb.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,24 @@
+// РАСШИРЕНИЕ ФУНКЦИОНАЛА GC. УДАЛЕНИЕ СИСТЕМНЫХ ЗАКАЗОВ В РАЗДЕЛЕ "ПОКУПКИ"
+const deleteSystemsOrders = () => {
+//////////////////////////////////////////////////////////////////////////////////////
+// ПАНЕЛЬ УПРАВЛЕНИЯ. НАЧАЛО // Определяем стоп-слова по которым будут удаляться
+позиции на странице // Прописываем их в одинарных кавычках и через запятую const
+stopWords = [ 'Чекин', 'Вебинар', 'Регистрация', ]; // Прописываем без домена
+адрес страницы, на которой будет работать скрипт const workPagePathname =
+'/sales/control/userProduct/my';
+//////////////////////////////////////////////////////////////////////////////////////
+// ПАНЕЛЬ УПРАВЛЕНИЯ. КОНЕЦ if
+(!window.location.pathname.includes(workPagePathname)) { return; } const mainBox
+= document.querySelector('.gc-main-content'); if (!mainBox) { return; } const
+isEmployee = ['gc-user-teacher', 'gc-user-admin'].find((item) =>
+mainBox.classList.contains(item) ); if (isEmployee) { return; } const strings =
+document.querySelectorAll( '.main-page-block .container table tbody tr' ); if
+(strings.length === 0) { return; } stopWords.forEach((item) => {
+hideElement(item); }); // Функция для отслеживания стоп-слов и скрытия элементов
+function hideElement(stopWord) { for (let i = 0; i < strings.length; i++) {
+const stringColumn = strings[i].querySelectorAll('td'); for (let j = 0; j <
+stringColumn.length; j++) { const item =
+stringColumn[j].textContent.trim().toLowerCase(); if
+(item.includes(stopWord.toLowerCase())) { strings[i].style.display = 'none';
+break; } } } } }; window.addEventListener('DOMContentLoaded',
+deleteSystemsOrders);

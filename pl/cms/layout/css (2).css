@@ -1,0 +1,260 @@
+:root {
+  --font: "Stolzl", sans-serif;
+  --font-book: "Stolzl Book", sans-serif;
+}
+@media (min-width: 769px) {
+  .gc-account-leftbar {
+    width: 80px;
+  }
+  .gc-main-content.with-left-menu {
+    margin-left: 80px;
+  }
+  .gc-account-leftbar .gc-account-user-submenu-bar {
+    left: 80px;
+  }
+  html .gc-account-leftbar .gc-account-user-menu li a {
+    width: 80px;
+  }
+  .with-left-menu .gc-into-main-content {
+    left: 80px;
+  }
+  .resp-screen.resp-full-window.full-window-size {
+    left: 80px !important;
+  }
+  .gc-user-logined .talks-widget-window {
+    left: 80px;
+    width: calc(100% - 80px);
+  }
+}
+
+.gc-account-leftbar {
+  --menu-icon-height: 76px;
+  --menu-padding-y: 0;
+  --menu-padding-x: 0;
+  --menu-icon-radius: var(--br-sm) 0 0 var(--br-sm);
+}
+@media (min-width: 769px) and (max-height: 750px) {
+  .gc-account-leftbar {
+    --menu-icon-height: 70px;
+  }
+}
+@media (min-width: 769px) and (max-height: 650px) {
+  .gc-account-leftbar {
+    --menu-icon-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  html .gc-page-nav-items-menu {
+    left: 70px;
+  }
+
+  html .gc-account-leftbar .gc-account-user-submenu-bar {
+    width: calc(100vw - 80px);
+  }
+  html
+    .gc-account-leftbar
+    .gc-account-user-submenu-bar-notifications_button_small {
+    width: calc(100vw - 80px);
+  }
+}
+.gc-account-user-menu
+  li:not(.menu-item-profile):not(.menu-item-notifications_button_small)
+  a,
+.gc-account-user-menu
+  li:not(.menu-item-profile):not(.menu-item-notifications_button_small).active
+  a,
+.gc-account-user-menu
+  li:not(.menu-item-profile):not(.menu-item-notifications_button_small).selected
+  a {
+  background-position: 50% 30% !important;
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+}
+
+.gc-account-user-menu
+  li:not(.menu-item-profile):not(.menu-item-notifications_button_small)
+  a {
+  min-height: 70px;
+}
+@media (min-width: 769px) {
+  .gc-account-leftbar .gc-account-user-menu li:not(.menu-item-profile) {
+    margin: 5px;
+  }
+  .gc-account-leftbar .gc-account-user-menu li:not(.menu-item-profile) a {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+  }
+  .gc-account-leftbar
+    li:not(.menu-item-profile):not(.menu-item-notifications_button_small)
+    .notify-count {
+    bottom: unset;
+    top: 40%;
+  }
+}
+.gc-account-user-menu li.active a:before,
+.gc-account-user-menu li.selected a:before {
+  color: #ffffff !important;
+}
+
+.gc-account-user-menu li a:before {
+  display: block;
+  text-align: center;
+  max-width: calc(100% + 20px);
+  min-height: 1em;
+  width: calc(100% + 20px);
+  overflow: hidden;
+  position: relative;
+  margin: 5px -10px 0;
+  font-size: var(--font);
+  font-size: 9px;
+  color: #ffffff;
+  /* 
+  Если вы заменяете иконки через фон ссылки, 
+  а не через :after, то используйте эти свойства: */
+  /*
+  position: absolute;
+  bottom: 8px; 
+  left: 0; 
+  */
+}
+
+.gc-account-user-menu li.menu-item-cms a:before {
+  content: "Сайт";
+}
+.gc-account-user-menu li.menu-item-teach a:before {
+  content: "Обучение";
+}
+.gc-account-user-menu li.menu-item-user a:before {
+  content: "Ученики";
+}
+.gc-account-user-menu li.menu-item-tasks a:before {
+  content: "Задачи";
+}
+.gc-account-user-menu li.menu-item-notifications a:before {
+  content: "Сообщения";
+}
+.gc-account-user-menu li.menu-item-sales a:before {
+  content: "Покупки";
+}
+
+.gc-account-user-menu li.menu-item-chatium a:before {
+  content: "Apps";
+}
+.gc-account-user-submenu-bar h3 {
+  font-family: var(--font);
+  font-size: 20px !important;
+  color: turquoise !important;
+  font-weight: 400;
+  font-size: 26px !important;
+  letter-spacing: -0.02em;
+}
+
+a.subitem-link {
+  font-family: var(--font);
+  text-transform: none !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  letter-spacing: -0.02em;
+  color: #3a3a3a !important;
+}
+
+.gc-account-leftbar .gc-account-user-menu li a {
+  background: inherit;
+}
+
+.gc-account-leftbar .gc-account-user-menu li {
+  border-bottom: none;
+}
+
+/* Фоновое изображение */
+.gc-account-leftbar,
+.gc-account-leftbar.expanded .toggle-link {
+  background: #2a307e !important;
+}
+
+/* Прячем старые иконки */
+.menu-item-notifications_button_small img.menu-item-icon,
+.menu-item-cms img.menu-item-icon,
+.menu-item-user img.menu-item-icon,
+.menu-item-tasks img.menu-item-icon,
+.menu-item-teach img.menu-item-icon,
+.menu-item-notifications img.menu-item-icon,
+.menu-item-sales img.menu-item-icon,
+.menu-item-chatium img.menu-item-icon {
+  display: none !important;
+}
+
+/* Уведомления */
+li.menu-item-notifications_button_small a:after {
+  content: url(https://fs.getcourse.ru/fileservice/file/download/a/620404/sc/504/h/56eb788e599795f58895711516308aca.svg) !important;
+}
+
+
+/*li.menu-item-chatium {
+    display: none!important;
+}*/
+
+a.subitem-link:after {
+  display: none;
+}
+
+.gc-account-leftbar .gc-account-user-submenu-bar li.menu-item-accountSettings a,
+.gc-account-leftbar .gc-account-user-submenu-bar li.menu-item-help a {
+  border-top: none !important;
+}
+/* Цвет фона подменю */
+
+.gc-account-leftbar .gc-account-user-submenu-bar {
+  background: #e2e4f7;
+}
+.gc-account-leftbar .gc-account-user-menu li a:hover,
+.gc-account-leftbar .gc-account-user-menu li.selected a,
+.gc-account-leftbar .gc-account-user-menu li.active a {
+  background: #484fa4;
+}
+.gc-account-leftbar
+  .gc-account-user-menu
+  li.menu-item-notifications_button_small
+  .notify-count {
+  bottom: auto;
+
+  right: 0px;
+}
+.gc-account-leftbar .notify-count {
+  background: #f02a2a;
+
+  color: #ffffff;
+  border-radius: 50%;
+}
+.gc-account-user-submenu-bar .gc-account-user-submenu li a {
+  transition: all 0.5s;
+}
+.gc-account-user-submenu-bar .gc-account-user-submenu li a:hover {
+  background: #484fa4;
+  color: #fff !important;
+  z-index: 1;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.gc-account-user-menu > .menu-item-profile .menu-item-icon {
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+  border: 4px solid #ffffff;
+}
+.subitem-link .notify-count {
+  margin-top: -3%;
+}
+@media (max-width: 768px) {
+  .gc-account-leftbar .gc-account-user-menu,
+  .gc-account-leftbar .toggle-link {
+    background: turquoise no-repeat !important;
+  }
+}

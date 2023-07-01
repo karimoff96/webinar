@@ -1,0 +1,26 @@
+window.addEventListener('DOMContentLoaded', () => { // Прописываем только ID
+наших созданных полей по ЗАКАЗАМ const UTMSDeal = [ ['utm_source',
+'input[name="formParams[dealCustomFields][1537440]'], ['utm_medium',
+'input[name="formParams[dealCustomFields][1537441]'], ['utm_campaign',
+'input[name="formParams[dealCustomFields][1537442]'], ['utm_content',
+'input[name="formParams[dealCustomFields][1537443]'], ['utm_term',
+'input[name="formParams[dealCustomFields][1537444]'], ]; // Прописываем только
+ID наших созданных полей по ПОЛЬЗОВАТЕЛЯМ const UTMSUser = [ ['utm_source',
+'input[name="formParams[userCustomFields][1537447]'], ['utm_medium',
+'input[name="formParams[userCustomFields][1537448]'], ['utm_campaign',
+'input[name="formParams[userCustomFields][1537449]'], ['utm_content',
+'input[name="formParams[userCustomFields][1537450]'], ['utm_term',
+'input[name="formParams[userCustomFields][1537451]'], ]; // Функция для
+получения параметров UTM const getUTM = (name, inputSelector) => { const inputs
+= document.querySelectorAll(inputSelector); if (inputs.length === 0) return; //
+Записываем в переменную полное значение ссылки в поисковой строке и
+преобразовываем ее в нормальный вид const searchParams =
+decodeURIComponent(window.location.href); // В переменную записываем итог
+регулярного выражения const result = searchParams.match(new RegExp(name +
+'=([^&=#]+)')); // Если нашлось соответствие, то записываем в input значение if
+(result && result !== null) { inputs.forEach(input => { input.value =
+decodeURI(result[1]); }); } }; const setOrderSettings = () => { // Задаем
+интервал для проверки появления input на странице раз в 0.5 миллисекунд
+setInterval(() => { UTMSDeal.forEach(([utm, fieldId]) => getUTM(utm, fieldId));
+UTMSUser.forEach(([utm, fieldId]) => getUTM(utm, fieldId)); }, 500); };
+setOrderSettings(); });
