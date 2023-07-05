@@ -1,0 +1,20 @@
+from django.db import models
+
+class Content(models.Model):
+    title = models.TextField(blank=False)
+    ad = models.CharField(max_length=40)
+    header = models.TextField(blank=False)
+    bonus = models.TextField(blank=False)
+    features_1 = models.CharField(max_length=180)
+    features_2 = models.CharField(max_length=180)
+    features_3 = models.CharField(max_length=180)
+    features_4 = models.CharField(max_length=180)
+    features_5 = models.CharField(max_length=180)
+    features_6 = models.CharField(max_length=180)
+    info_1 = models.CharField(max_length=180)
+    info_2 = models.CharField(max_length=180)
+    info_3 = models.CharField(max_length=180)
+    info_4 = models.CharField(max_length=180)
+    info_5 = models.CharField(max_length=180)
+    about = models.CharField(max_length=100)
+    about_image = models.ImageField(upload_to="images/")

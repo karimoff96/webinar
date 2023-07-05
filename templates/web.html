@@ -1,5 +1,5 @@
+{% load static %}
 <!DOCTYPE html>
-
 <head>
 
 	<script type="text/javascript">
@@ -31,7 +31,7 @@
 	<script src="/nassets/d6d3d9a1/jquery-ui.min.js?v=1685613221"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!-- /Yandex.Metrika counter -->
-	<title>Хазм системасидаги муаммолар ва уларнинг уй шароитида ечими.</title>
+	<title>{{ posts.title }}</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -280,7 +280,10 @@
 											class="builder-item part-text  educational_intensive">
 											<div style='' class='text-normal f-text'
 												data-param='items/parts/text1/inner/text' data-editable='true'>
-												<p>Онлайн Видео Семинар</p>
+												{% for p in posts%}
+												<p>{{ p.ad }}</p>
+												{% endfor %}
+												
 											</div>
 										</div>
 										<style>
@@ -291,7 +294,9 @@
 											class="builder-item part-header  text-left">
 											<div data-editable=true data-param='items/parts/field14448/inner/text'
 												class='f-header f-header-72'>
-												<p>Хазм системасидаги муаммолар ва уларнинг <br> уй шароитида ечими.</p>
+												{% for p in posts%}
+												<p>{{ p.header }}</p>
+												{% endfor %}
 											</div>
 										</div>
 										<style>
@@ -1176,7 +1181,9 @@
 											class="builder-item part-text  educational_intensive text-center">
 											<div style='' class='text-normal f-text'
 												data-param='items/parts/text1/inner/text' data-editable='true'>
-												<p>Онлайн Видео Семинар</p>
+												{% for p in posts%}
+												<p>{{ p.ad }}</p>
+												{% endfor %}
 											</div>
 										</div>
 										<style>
@@ -1187,8 +1194,9 @@
 											class="builder-item part-header  text-center">
 											<div data-editable=true data-param='items/parts/header1/inner/text'
 												class='f-header f-header-36'>
-												<p>Хазм системасидаги муаммолар ва <br> уларнинг
-													 уй шароитида ечими</p>
+												{% for p in posts%}
+												<p>{{ p.header }}</p>
+												{% endfor %}
 											</div>
 										</div>
 										<style>
@@ -1678,8 +1686,9 @@
 								data-setting-editable="true" class="builder-item part-header  text-left">
 								<div data-editable=true data-param='column1/parts/header1/inner/text'
 									class='f-header f-header-36'>
-									<p>Ҳозироқ рўйҳатдан ўтинг ва Витамин Д видео дарсини совға сифатида бепул қўлга
-										киритинг!</span></p>
+									{% for p in posts%}
+												<p>{{ p.bonus }}</p>
+												{% endfor %}
 								</div>
 							</div>
 							<style>
@@ -1689,7 +1698,7 @@
 								data-setting-editable="true" class="builder-item part-text  tittle_1 text-left">
 								<div style='' class='text-normal f-text' data-param='column1/parts/text1/inner/text'
 									data-editable='true'>
-									<p>Бонус Витамин Д (тўлиқ видео дарс)</p>
+									
 								</div>
 							</div>
 							<style>
@@ -1703,7 +1712,7 @@
 
 								<a href="https://button.kommo.com/cwmxxl">
 									<button type="submit" id="button7962318" class="btn f-btn  button-md btn-success">
-										Витамин Д дарсини олиш
+										олиш
 									</button>
 								</a>
 
@@ -2170,8 +2179,13 @@
 
 											<div data-editable="true" data-param="data/0/description"
 												class="  f-description lt-tsr-text-part description">
-												<p><span>Муаммоингиз аслида нимада эканлигига анниклик киритиб
-														оласиз</span></p>
+												{% for p in posts%}
+												<p>
+													<span>
+														{{ p.features_1 }}
+												</span>
+											</p>
+											{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/0"
 												data-title="Элемент 0" data-setting-editable="true"></div>
@@ -2208,9 +2222,13 @@
 
 											<div data-editable="true" data-param="data/1/description"
 												class="  f-description lt-tsr-text-part description">
-												<p><span>Уй шароитида бирламчи диагностика ва даво чоралари
-
-													</span></p>
+												{% for p in posts%}
+												<p>
+													<span>
+														{{ p.features_2 }}
+												</span>
+											</p>
+											{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/1"
 												data-title="Элемент 1" data-setting-editable="true"></div>
@@ -2247,8 +2265,13 @@
 
 											<div data-editable="true" data-param="data/2/description"
 												class="  f-description lt-tsr-text-part description">
-												<p><span>Тавфсиялар орқали организминггизни энергияга тўлдиринг</span>
-												</p>
+												{% for p in posts%}
+												<p>
+													<span>
+														{{ p.features_3 }}
+												</span>
+											</p>
+											{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/2"
 												data-title="Элемент 2" data-setting-editable="true"></div>
@@ -2283,8 +2306,13 @@
 
 											<div data-editable="true" data-param="data/3/description"
 												class="  f-description lt-tsr-text-part description">
-												<p><span>Завоманив ва анъанавий тиббиётдан келиб чиккан холда даво
-														чоралари</span></p>
+												{% for p in posts%}
+												<p>
+													<span>
+														{{ p.features_4 }}
+												</span>
+											</p>
+											{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/3"
 												data-title="Элемент 3" data-setting-editable="true"></div>
@@ -2319,7 +2347,13 @@
 
 											<div data-editable="true" data-param="data/4/description"
 												class="  f-description lt-tsr-text-part description">
-												<p><span>Керакли анализларни топширишни билиб оласиз</span></p>
+												{% for p in posts%}
+												<p>
+													<span>
+														{{ p.features_5 }}
+												</span>
+											</p>
+											{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/4"
 												data-title="Элемент 4" data-setting-editable="true"></div>
@@ -2354,10 +2388,13 @@
 
 											<div data-editable="true" data-param="data/5/description"
 												class="  f-description lt-tsr-text-part description">
-												<p><span>Бонус: Витамин Д (Видео дарси) Рўйҳатдан ўтганлар учун мутлақо
-														бепул. Витамин Д дарслиги орқали, Витамин д етишмовчилиги,
-														олдини олиш, даволаш ва кўплаб тавфсияларни билиб оласиз.</span>
-												</p>
+												{% for p in posts%}
+												<p>
+													<span>
+														{{ p.features_6 }}
+												</span>
+											</p>
+											{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/5"
 												data-title="Элемент 5" data-setting-editable="true"></div>
@@ -2857,9 +2894,11 @@
 								<div style='' class='text-normal f-text' data-param='column1/parts/text1/inner/text'
 									data-editable='true'>
 									<ul>
-										<li>Юрак-кон томир касалликлари охирги 10-15 йил ичида жуда ёшарди ва хозирги
-											кунда ёши 30-35 ёш инсонларда инфаркт холатлари купайган
+										{% for p in posts %}
+										<li>
+											{{ p.info_1 }}
 										</li>
+										{% endfor %}
 									</ul>
 								</div>
 							</div>
@@ -2878,10 +2917,11 @@
 								<div style='' class='text-normal f-text'
 									data-param='column1/parts/field17273/inner/text' data-editable='true'>
 									<ul>
-										<li>Гипертония хакида гап булиши мумкин эмас. Расмий статистикага кура,
-											Узбекистон худудида деярли хар 2- инсон юкори кон босими билан азият чекиб
-											келади. Норасмий малумотга кура, менимча 70% дан куп ахолида гипертония
-											касаллиги мавжуд</li>
+										{% for p in posts %}
+										<li>
+											{{ p.info_2 }}
+										</li>
+										{% endfor %}
 									</ul>
 								</div>
 							</div>
@@ -2900,9 +2940,11 @@
 								<div style='' class='text-normal f-text'
 									data-param='column1/parts/field27071/inner/text' data-editable='true'>
 									<ul>
-										<li>Организмдаги касалликларни 90% купи нотугри овкатланиш натижасида келиб
-											чикадиги. Кайсидир модда, витаминларни организмдаги етишмовчилиги хам айнан
-											шу хазм системасидаги муаммолар сабаб вужудга келади.</li>
+										{% for p in posts %}
+										<li>
+											{{ p.info_3 }}
+										</li>
+										{% endfor %}
 									</ul>
 								</div>
 							</div>
@@ -2921,8 +2963,11 @@
 								<div style='' class='text-normal f-text'
 									data-param='column1/parts/field87991/inner/text' data-editable='true'>
 									<ul>
-										<li>Хазм системасида анник сезиларли муаммоси бор инсонлар учун фойдали
-											малумотлар</li>
+										{% for p in posts %}
+										<li>
+											{{ p.info_4 }}
+										</li>
+										{% endfor %}
 									</ul>
 								</div>
 							</div>
@@ -2943,9 +2988,11 @@
 								<div style='' class='text-normal f-text'
 									data-param='column1/parts/field87991_22/inner/text' data-editable='true'>
 									<ul>
-										<li>Вебинарларимни асосий принципи - фойдали ва катта микдордаги малумотларни
-											оддий тилда тушунтириш
+										{% for p in posts %}
+										<li>
+											{{ p.info_5 }}
 										</li>
+										{% endfor %}
 									</ul>
 								</div>
 							</div>
@@ -3493,10 +3540,11 @@
 										class="builder-item part-header  text-left animated-element before-animation">
 										<div data-editable=true data-param='items/parts/header1/inner/text'
 											class='f-header f-header-36'>
-											<p>Норпулатов Элёр Махмудович
-												<br>
-												Врач, терапевт, кардиолог
+											{% for p in posts %}
+											<p>
+												{{ p.about }}
 											</p>
+											{% endfor %}
 										</div>
 									</div>
 									<style>
