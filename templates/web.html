@@ -1,5 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
+
 <head>
 
 	<script type="text/javascript">
@@ -283,7 +284,7 @@
 												{% for p in posts%}
 												<p>{{ p.ad }}</p>
 												{% endfor %}
-												
+
 											</div>
 										</div>
 										<style>
@@ -1242,8 +1243,8 @@
 					</div>
 					<div class="faq-content">
 						<div class="faq-question"">
-							<input id="q1" type="checkbox" class="panel">
-							<label style="padding-left: 30%;" for="q1" class="panel-title">
+							<input id=" q1" type="checkbox" class="panel">
+							<!-- <label style="padding-left: 30%;" for="q1" class="panel-title">
 								<span style="user-select: none; background-color: turquoise; color: #fff; padding: 10px 10px; border-radius: 10px;">Мен кимман?</span>
 								
 								<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -1260,7 +1261,9 @@
 								10 дакикалик врач куригида бу малумотларни етказиб беришни иложи йук. Айнан шунинг учун
 								хам бу блог сиз учун фойдали булади.
 								Хуш келибсиз!
-							</div>
+							</div> -->
+
+
 						</div>
 					</div>
 					<style>
@@ -1475,7 +1478,12 @@
 				}
 			</style>
 
-
+			<div class="poster">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/{%for p in posts%}{{p.video_link}}{%endfor%}"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+			</div>
 			<div id="ltBlock1742028375" data-block-id="1742028936" data-has-css="true"
 				data-has-limited-visibility="true" class="lt-block lt-view form02 lt-form lt-form-normal"
 				data-code="b-3df91">
@@ -1489,10 +1497,10 @@
 							<div class="row">
 								<div style="padding-left: 100px;"
 									class="modal-block-content block-box col-md-8 col-md-offset-2" style="">
-									<a href="https://button.kommo.com/cwmxxl">
+									<a href="{%for p in posts%}{{p.button_link}}{%endfor%}">
 										<button type="submit" id="button7962318"
 											class="btn f-btn  button-md btn-success">
-											Бепул рўйҳатдан ўтинг
+											Рўйҳатдан ўтиш
 										</button>
 									</a>
 									<script>
@@ -1687,8 +1695,8 @@
 								<div data-editable=true data-param='column1/parts/header1/inner/text'
 									class='f-header f-header-36'>
 									{% for p in posts%}
-												<p>{{ p.bonus }}</p>
-												{% endfor %}
+									<p>{{ p.bonus }}</p>
+									{% endfor %}
 								</div>
 							</div>
 							<style>
@@ -1698,7 +1706,7 @@
 								data-setting-editable="true" class="builder-item part-text  tittle_1 text-left">
 								<div style='' class='text-normal f-text' data-param='column1/parts/text1/inner/text'
 									data-editable='true'>
-									
+
 								</div>
 							</div>
 							<style>
@@ -1710,9 +1718,9 @@
 								data-setting-editable="true" class="builder-item part-button  autoflash text-left">
 
 
-								<a href="https://button.kommo.com/cwmxxl">
+								<a href="{%for p in posts%}{{p.bonus_link}}{%endfor%}">
 									<button type="submit" id="button7962318" class="btn f-btn  button-md btn-success">
-										олиш
+										Бонусни юклаб олиш
 									</button>
 								</a>
 
@@ -1884,7 +1892,7 @@
 
 								<div id="image3146189" class="image-box" data-img-title=""
 									data-img-src="https://fs02.getcourse.ru/fileservice/file/download/a/620404/sc/154/h/1d6ab1ab9275ee670595995aa5c4c069.png">
-									<img class="lazyload" data-src="/nassets/img/phone-img1.png"
+									<img class="lazyload" data-src="{%for p in posts%}{{p.about_image.url}}{%endfor%}"
 										data-param="column2/parts/image1/inner/image"
 										data-hash="1d6ab1ab9275ee670595995aa5c4c069.png" data-image-editable="true"
 										title="" alt="" style="" />
@@ -1973,7 +1981,9 @@
 										data-setting-editable="true" class="builder-item part-header  text-left">
 										<div data-editable=true data-param='items/parts/header1/inner/text'
 											class='f-header f-header-36'>
-											<p>Вебинарлардан сиз олишингиз мумкин:</p>
+											{% for p in posts %}
+											<p>{{ p.features_head }}</p>
+											{% endfor %}
 										</div>
 									</div>
 									<style>
@@ -2183,9 +2193,9 @@
 												<p>
 													<span>
 														{{ p.features_1 }}
-												</span>
-											</p>
-											{% endfor %}
+													</span>
+												</p>
+												{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/0"
 												data-title="Элемент 0" data-setting-editable="true"></div>
@@ -2226,9 +2236,9 @@
 												<p>
 													<span>
 														{{ p.features_2 }}
-												</span>
-											</p>
-											{% endfor %}
+													</span>
+												</p>
+												{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/1"
 												data-title="Элемент 1" data-setting-editable="true"></div>
@@ -2269,9 +2279,9 @@
 												<p>
 													<span>
 														{{ p.features_3 }}
-												</span>
-											</p>
-											{% endfor %}
+													</span>
+												</p>
+												{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/2"
 												data-title="Элемент 2" data-setting-editable="true"></div>
@@ -2310,9 +2320,9 @@
 												<p>
 													<span>
 														{{ p.features_4 }}
-												</span>
-											</p>
-											{% endfor %}
+													</span>
+												</p>
+												{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/3"
 												data-title="Элемент 3" data-setting-editable="true"></div>
@@ -2351,9 +2361,9 @@
 												<p>
 													<span>
 														{{ p.features_5 }}
-												</span>
-											</p>
-											{% endfor %}
+													</span>
+												</p>
+												{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/4"
 												data-title="Элемент 4" data-setting-editable="true"></div>
@@ -2392,9 +2402,9 @@
 												<p>
 													<span>
 														{{ p.features_6 }}
-												</span>
-											</p>
-											{% endfor %}
+													</span>
+												</p>
+												{% endfor %}
 											</div>
 											<div class="common-setting-link in-block-setting-link" data-param="data/5"
 												data-title="Элемент 5" data-setting-editable="true"></div>
@@ -2875,8 +2885,11 @@
 								data-setting-editable="true" class="builder-item part-header  text-left">
 								<div data-editable=true data-param='column1/parts/header1/inner/text'
 									class='f-header f-header-36'>
-									<p>Кимлар учун менинг вебинарларим фойдали?</span>
+									{% for p in posts %}
+									<p>
+										{{ p.info_head}}
 									</p>
+									{% endfor %}
 								</div>
 							</div>
 							<style>
@@ -3010,10 +3023,10 @@
 								data-setting-editable="true"
 								class="builder-item part-button  btn2 half autoflash text-left">
 
-								<a href="https://button.kommo.com/cwmxxl">
+								<a href="{%for p in posts%}{{p.button_link}}{%endfor%}">
 									<button type="button" id="button5145688" class="btn f-btn  button-md btn-success"
 										style="color: ; background-color: ; ">
-										Бепул рўйҳатдан ўтинг</button>
+										Pўйҳатдан ўтинг</button>
 								</a>
 
 								<style>
@@ -4578,10 +4591,10 @@
 										class="builder-item part-button  autoflash text-center">
 
 
-										<a href="https://button.kommo.com/cwmxxl">
+										<a href="{%for p in posts%}{{p.button_link}}{%endfor%}">
 											<button type="submit" id="button7962318"
 												class="btn f-btn  button-md btn-success">
-												Бепул рўйҳатдан ўтинг
+												Рўйҳатдан ўтиш
 											</button>
 										</a>
 
@@ -5048,7 +5061,8 @@
 									<br>
 									<br>
 									<br>
-									<a href="https://instagram.com/wemard.uz?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">Developed by Wemard</a>
+									<a href="https://instagram.com/wemard.uz?igshid=OGQ5ZDc2ODk2ZA=="
+										target="_blank">Developed by Wemard</a>
 									</p>
 								</div>
 							</div>
